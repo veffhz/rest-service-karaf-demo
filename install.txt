@@ -1,0 +1,33 @@
+Установка зависимостей:
+
+В консоли karaf bin\client.bat (bin/client) выполнить
+
+bundle:install mvn:com.microsoft.sqlserver/mssql-jdbc/6.2.1.jre8
+
+bundle:install mvn:org.codehaus.jackson/jackson-jaxrs/1.9.13
+bundle:install mvn:org.codehaus.jackson/jackson-core-asl/1.9.13
+bundle:install mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.13
+
+
+
+Сборка rest сервиса:
+mvn clean package
+
+
+
+Исользование rest сервиса:
+
+All person:
+GET http://localhost:9000/rest/person
+
+One person:
+GET http://localhost:9000/rest/person/7
+
+Create person:
+POST name=test to http://localhost:9000/rest/person
+
+Update person:
+PUT id=7,name=test to http://localhost:9000/rest/person
+
+Delete one person:
+DELETE http://localhost:9000/rest/person/7
