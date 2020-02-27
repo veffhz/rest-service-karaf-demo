@@ -4,10 +4,6 @@
 
 bundle:install mvn:com.microsoft.sqlserver/mssql-jdbc/6.2.1.jre8
 
-bundle:install mvn:org.codehaus.jackson/jackson-jaxrs/1.9.13
-bundle:install mvn:org.codehaus.jackson/jackson-core-asl/1.9.13
-bundle:install mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.13
-
 
 
 Сборка rest сервиса:

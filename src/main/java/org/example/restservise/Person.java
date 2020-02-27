@@ -1,15 +1,14 @@
 package org.example.restservise;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Person {
 
     private int id;
     private String name;
 
     public Person() {
-    }
-
-    public Person(String name) {
-        this.name = name;
     }
 
     public Person(int id, String name) {
@@ -23,6 +22,14 @@ public class Person {
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override

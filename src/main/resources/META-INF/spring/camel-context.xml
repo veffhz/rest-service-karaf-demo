@@ -7,15 +7,10 @@
 
     <bean id="personService" class="org.example.restservise.PersonService" />
 
-    <bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider"/>
-
     <jaxrs:server id="restService" address="http://172.17.0.2:9000/rest">
         <jaxrs:serviceBeans>
             <ref bean="personService"/>
         </jaxrs:serviceBeans>
-        <jaxrs:providers>
-            <ref bean="jsonProvider"/>
-        </jaxrs:providers>
     </jaxrs:server>
 
 </beans>
